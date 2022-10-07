@@ -1,9 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>people</ion-title>
+    <ion-title>{{ film?.people }}</ion-title>
+    <ion-buttons slot="start" defaultHref="/tabs/people">
+      <ion-back-button></ion-back-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <<ion-card *ngIf="people">
+    <ion-card-content>
+      {{ people.opening_crawl }}
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>
