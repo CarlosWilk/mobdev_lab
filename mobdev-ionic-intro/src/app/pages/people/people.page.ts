@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { ApiService } from '../../services/api.service';
 
@@ -11,29 +11,17 @@ import { ApiService } from '../../services/api.service';
 export class PeoplePage implements OnInit {
 
   people: Observable<any>;
-  router: any;
 
-  constructor(private activatedRoute: ActivatedRoute, private api: ApiService) { }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
+  constructor(private router: Router, private api: ApiService) { }
+  
+  ngOnInit() {
+    this.people = this.api.getPeople();
   }
 
-  openDetails(people){
-    let split = people.url.slipt('/');
-    let peopleId = split[split.length-2];
-    this.router.navigateByUrl(`/tabs/people/${peopleId}`);
+  openDetails(person){
+    let split = person.url.slipt('/');
+    let personId = split[split.length-2]; //person or people?
+    this.router.navigateByUrl(`/tabs/people/${personId}`); //need to check
   }
-
-  // ngOnInit() { 
-  //   this.people = this.api.getPeople();
-  //   let id = this.activatedRoute.snapshot.paramMap.get('id');
-  //   this.api.getPeople(id).subscribe(res => {
-  //     this.people = res;
-  //   }
-    
-  //  )
-
-    
- // }
 
 }
