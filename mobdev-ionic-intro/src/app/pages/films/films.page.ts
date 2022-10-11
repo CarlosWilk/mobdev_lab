@@ -23,4 +23,6 @@ export class FilmsPage implements OnInit {
     let filmId = split[split.length-2];
     this.router.navigateByUrl(`/tabs/films/${filmId}`);
   }
+
+  
 }

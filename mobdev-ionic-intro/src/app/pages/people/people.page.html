@@ -5,5 +5,8 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-list>
+    <ion-item button detail lines="@inset" *ngFor="let film of (people | async)?.results" (click)="openDetails(people)">	
+      {{ people.title }}</ion-item>
+  </ion-list>
 </ion-content>
