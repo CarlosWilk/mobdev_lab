@@ -24,5 +24,4 @@ export class FilmsPage implements OnInit {
     this.router.navigateByUrl(`/tabs/films/${filmId}`);
   }
 
-  
 }
