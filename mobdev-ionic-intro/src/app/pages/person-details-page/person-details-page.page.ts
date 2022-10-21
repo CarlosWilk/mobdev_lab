@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ApiService } from '../../services/api.service';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-person-details-page',
@@ -16,7 +16,7 @@ export class PersonDetailsPagePage implements OnInit {
   ngOnInit() {
     let id = this.activatedRoute.snapshot.paramMap.get('id');
     this.api.getPerson(id).subscribe(res => {
-    this.person = res;
+      this.person = res;
     });
   }
 
