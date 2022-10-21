@@ -20,11 +20,10 @@ export class PeoplePage implements OnInit {
   }
 
   openDetails(person){
-    console.log(person);
 
-    let split = person.url.slipt('/');
-    let personId = split[split.length-2]; //person or people?
-    this.router.navigateByUrl(`/tabs/people/${personId}`); //need to check
+    let split = person.url.split('/');
+    let personId = split[split.length-2];
+    this.router.navigateByUrl(`/tabs/people/${personId}`);
   }
 
 }
