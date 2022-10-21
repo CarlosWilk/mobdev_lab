@@ -7,6 +7,14 @@ import { IonicModule } from '@ionic/angular';
 import { PlanetDetailsPagePageRoutingModule } from './planet-details-page-routing.module';
 
 import { PlanetDetailsPagePage } from './planet-details-page.page';
+import { Routes } from '@angular/router';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: PlanetDetailsPagePage
+  }
+];
 
 @NgModule({
   imports: [

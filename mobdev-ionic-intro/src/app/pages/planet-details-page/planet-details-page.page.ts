@@ -9,15 +9,15 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class PlanetDetailsPagePage implements OnInit {
 
-  planet : any;
+  planet: any;
 
   constructor(private activatedRoute: ActivatedRoute, private api: ApiService) { }
 
   ngOnInit() {
     let id = this.activatedRoute.snapshot.paramMap.get('id');
     this.api.getPlanet(id).subscribe(res => {
-    this.planet = res;
-  });
-}
+      this.planet = res;
+    });
+  }
 
 }
