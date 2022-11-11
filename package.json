@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "@ionic-native/status-bar": "^5.36.0"
+    "@ionic-native/status-bar": "^5.36.0",
+    "@ionic/storage": "^3.0.6"
   },
   "devDependencies": {
     "@angular/cli": "14.2.9"

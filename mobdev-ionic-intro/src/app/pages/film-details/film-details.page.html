@@ -4,8 +4,8 @@
       <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title>{{ film?.title }}</ion-title>
-    <ion-buttons slot="end">
-      <ion-button (click)="unfavoriteFilm()" *ngIf="isFavorite">
+      <ion-buttons slot="end">
+        <ion-button (click)="unfavouriteFilm()" *ngIf="isFavourite">
         <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
       </ion-button>
       <ion-button (click)="favoriteFilm()" *ngIf="!isFavorite">
